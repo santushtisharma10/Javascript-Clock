@@ -14,8 +14,46 @@
     border-radius: 50%;
     position: relative;    
 }
+.clock::after {
 
+    content: "";
+    position: absolute;
+    background-color: black;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 11;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.clock .hand {
 
+    --hand-rotate : 0deg;
+    position: absolute;
+    background-color: black;
+    width: 3px;
+    height: 40%;
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    z-index: 9;
+    left: 50%;
+    bottom: 50%;
+}
+.clock .second {
+
+    width: 1px;
+    background-color: blue;
+    height: 45%;
+    z-index: 10;
+    transform: rotate(30deg);
+}
+.clock .minute {
+
+    width: 6px;
+    height: 35%;
+    background-color: red;
+}
 .clock .num {
 
     --rotation : 0deg;
