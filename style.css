@@ -30,12 +30,12 @@
 }
 .clock .hand {
 
-    --hand-rotate : 0deg;
+    --hand-rotate : 40;
     position: absolute;
     background-color: black;
     width: 3px;
     height: 40%;
-    transform: translateX(-50%) rotate(var(--hand-rotate));
+    transform: translateX(-50%) rotate(calc(var(--hand-rotate)* 1deg));
     transform-origin: bottom;
     z-index: 9;
     left: 50%;
@@ -47,7 +47,8 @@
     background-color: blue;
     height: 45%;
     z-index: 10;
-    --hand-rotate: 30deg;
+    --hand-rotate: 30;
+
 }
 .clock .minute {
 
