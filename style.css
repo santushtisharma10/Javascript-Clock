@@ -1,9 +1,14 @@
+/*styling needs to be improved */
 * {
 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
+}
+body {
+
+    overflow: hidden;
 }
 .clock {
 
@@ -30,10 +35,10 @@
 }
 .clock .hand {
 
-    --hand-rotate : 40;
+    --hand-rotate : 0;
     position: absolute;
     background-color: black;
-    width: 3px;
+    width: 2px;
     height: 40%;
     transform: translateX(-50%) rotate(calc(var(--hand-rotate)* 1deg));
     transform-origin: bottom;
@@ -52,9 +57,21 @@
 }
 .clock .minute {
 
-    width: 6px;
+    width: 4px;
     height: 35%;
-    background-color: red;
+
+}
+.time {
+
+    border: 2px solid black;
+    margin: 30px auto;
+    width: 300px;
+    padding: 20px;
+    display: none;
+}
+.clock:hover + .time {
+
+    display: inherit;
 }
 .clock .num {
 
