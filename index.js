@@ -12,13 +12,11 @@ function getTime() {
     const min = (sec+currDate.getMinutes())/60
     const hour = (min+currDate.getHours())/12
 
-    console.log(currDate, time)
     time.innerHTML = currDate
 
     setRotation(hourHand, hour)
     setRotation(minHand, min)
     setRotation(secHand, sec)
-    
 }
 
 function setRotation(element, rotationVal) {
